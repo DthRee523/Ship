@@ -12,6 +12,7 @@ MainWindow::MainWindow(QWidget *parent)
     this->mapInit();
 
     login_widget = new LoginWidget(this);
+    network = new Network(this);
     //时间计时器
     timer = new QTimer(this);
     timer->setInterval(500);
@@ -103,6 +104,9 @@ void MainWindow::connectFunctions()
     connect(this, &MainWindow::changeLightSignal, ui->page_2, &HxfzWidget::getlight);
     connect(this, &MainWindow::changeLightSignal, ui->page, &HxInformaion::changeLight);
     connect(this, &MainWindow::changeLightSignal, login_widget, &LoginWidget::changeLight);
+    connect(network, &Network::sendHxData, ui->page, &HxInformaion::getData);
+    connect(network, &Network::sendBaseData, this, &MainWindow::updateNetworkData);
+
 }
 
 void MainWindow::updateTimeLabel()
@@ -335,5 +339,13 @@ void MainWindow::updateData()
                               lon_z);
     ui->speed_lab->setText(QString::number(this->speed) + QString::fromLocal8Bit("Kn"));
     ui->sx_lab->setText(QString::number(this->sx) + QString::fromLocal8Bit("°"));
+}
+
+void MainWindow::updateNetworkData(double lat, double lon, int speed, int sx)
+{
+    this->lat = lat;
+    this->lon = lon;
+    this->speed = speed;
+    this->sx = sx;
 }
 

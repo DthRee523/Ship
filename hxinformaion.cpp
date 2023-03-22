@@ -211,6 +211,36 @@ void HxInformaion::updateData()
     this->updatePower2State(this->power_right_state);
     this->updateEle1State(this->ele1_state_1);
     this->updateEle2State(this->ele2_state_2);
+    ui->duo_widget->UpdateAngle(this->duo_value);
+    ui->duo1_widget->UpdateAngle(this->duo_value_1);
+}
+
+void HxInformaion::getData(int power_left_state, int power_left_dw, int power_left_gk, int power_right_state, int power_right_dw, int power_right_gk, int ele1_state_1, int ele1_state,
+                           double ele1_V, double ele1_A, int ele2_state_2, int ele2_state, double ele2_V, double ele2_A, int ele_an_state, double ele_an_V,
+                           double ele_an_A, int duo_value, int duo_value_1, int ym_value, int ym_value_1, int ry_value)
+{
+    this->power_left_state = power_left_state;
+    this->power_left_dw = power_left_dw;
+    this->power_left_gk = (double)power_left_gk / 100;
+    this->power_right_state = power_right_state;
+    this->power_right_dw = power_right_dw;
+    this->power_right_gk = (double)power_right_gk / 100;
+    this->ele1_state_1 = ele1_state_1;
+    this->ele1_state = ele1_state;
+    this->ele1_V = ele1_V;
+    this->ele1_A = ele1_A;
+    this->ele2_state_2 = ele2_state_2;
+    this->ele2_state = ele2_state;
+    this->ele2_V = ele2_V;
+    this->ele2_A = ele2_A;
+    this->ele_an_state = ele_an_state;
+    this->ele_an_V = ele_an_V;
+    this->ele_an_A = ele_an_A;
+    this->duo_value = duo_value;
+    this->duo_value_1 = duo_value_1;
+    this->ym_value = ym_value;
+    this->ym_value_1 = ym_value_1;
+    this->ry_value = ry_value;
 }
 
 QString HxInformaion::updateDw(int index)

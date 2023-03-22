@@ -24,6 +24,7 @@ SOURCES += \
     map.cpp \
     meterwidget.cpp \
     meterwidget1.cpp \
+    network.cpp \
     sqlwidget.cpp \
     zhfswidget.cpp
 
@@ -37,6 +38,7 @@ HEADERS += \
     map.h \
     meterwidget.h \
     meterwidget1.h \
+    network.h \
     sqlwidget.h \
     zhfswidget.h
 

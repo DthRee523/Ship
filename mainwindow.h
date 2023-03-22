@@ -8,6 +8,7 @@
 #include <QPainter>
 #include <QDebug>
 #include <QLineEdit>
+#include "network.h"
 #include "alarminformationwidget.h"
 #include "loginwidget.h"
 
@@ -26,6 +27,7 @@ public:
 private:
     Ui::MainWindow *ui;
     LoginWidget *login_widget;
+    Network *network;
     QTimer *timer;
     QPainter *painter;
     int alarmColor = 0;
@@ -37,8 +39,8 @@ private:
 
     double lat = 60.5;
     double lon = -120.5;
-    double speed = 60;
-    double sx = 120;//艏向
+    int speed = 60;
+    int sx = 120;//艏向
 
     void initWindow();
     void connectFunctions();
@@ -49,6 +51,7 @@ public slots:
     void updateAlarmInformation(QStringList information);
     void updateAlarmInformation2();
     void updateData();
+    void updateNetworkData(double lat, double lon, int speed, int sx);
 protected:
     void paintEvent(QPaintEvent *event) override;
 

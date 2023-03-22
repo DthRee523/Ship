@@ -28,6 +28,12 @@ public:
 public slots:
     void changeLight(int index);
     void updateData();
+    void getData(int power_left_state, int power_left_dw, int power_left_gk,
+                 int power_right_state, int power_right_dw, int power_right_gk,
+                 int ele1_state_1, int ele1_state, double ele1_V, double ele1_A,
+                 int ele2_state_2, int ele2_state, double ele2_V, double ele2_A,
+                 int ele_an_state, double ele_an_V, double ele_an_A, int duo_value,
+                 int duo_value_1, int ym_value, int ym_value_1, int ry_value);
 
 private:
     Ui::HxInformaion *ui;
@@ -47,8 +53,8 @@ private:
     int ele_an_state = 0;//岸电状态
     double ele_an_V = 0;//岸电电压
     double ele_an_A = 0;//岸电电流
-    int duo_value = 0;//主舵角指令
-    int duo_value_1 = 0;//副舵角指令
+    int duo_value = 90;//主舵角指令
+    int duo_value_1 = 90;//副舵角指令
     int power_left_state = 0;//主机报警状态
     int power_right_state = 0;
     int ele1_state_1 = 0;//报警状态
