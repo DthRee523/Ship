@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/engine0.png</file>
+        <file>image/engine1.png</file>
+        <file>image/engine2.png</file>
+        <file>image/engine3.png</file>
+        <file>image/leftFour.png</file>
+        <file>image/leftOne.png</file>
+        <file>image/leftThree.png</file>
+        <file>image/leftTwo.png</file>
+        <file>image/rightFour.png</file>
+        <file>image/rightOne.png</file>
+        <file>image/rightThree.png</file>
+        <file>image/rightTwo.png</file>
+    </qresource>
+</RCC>
