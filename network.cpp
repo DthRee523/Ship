@@ -2,6 +2,8 @@
 
 Network::Network(QObject *parent) : QObject(parent)
 {
+    QSettings * configIniRead = new QSettings("config.ini",QSettings::IniFormat);//初始化读取Ini文件对象
+    server = QHostAddress(configIniRead->value("server/ip").toString());//IP地址
     socket1 = new QUdpSocket(this);
     socket1->bind(QHostAddress::AnyIPv4, this->hxPort, QUdpSocket::ShareAddress);
     connect (socket1, &QUdpSocket::readyRead, this, &Network::getHxData);

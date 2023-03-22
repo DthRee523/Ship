@@ -11,6 +11,12 @@ CONFIG += c++11
 
 LIBS += -L"$$PWD/Eonic" -lEonic
 
+#自动复制配置文件
+CONFIG += file_copies
+config_file.files = $$PWD/config.ini
+config_file.path = $$OUT_PWD
+COPIES += config_file
+
 INCLUDEPATH += \
     $$PWD/Eonic
 

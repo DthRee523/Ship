@@ -5,6 +5,7 @@
 #include <QUdpSocket>
 #include <QHostAddress>
 #include <QDebug>
+#include <QSettings>
 
 class Network : public QObject
 {
@@ -50,8 +51,10 @@ private:
     int ele2_state_2 = 0;
 
     //端口区
-    int hxPort = 9001;//端口
-    int basePort = 9002;
+    int hxPort = 9001;//船舶信息端口
+    int basePort = 9002;//基本信息端口
+    //模拟仿真IP地址
+    QHostAddress server;
 
 
 signals:
