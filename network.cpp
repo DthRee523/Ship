@@ -10,6 +10,9 @@ Network::Network(QObject *parent) : QObject(parent)
     socket2 = new QUdpSocket(this);
     socket2->bind(QHostAddress::AnyIPv4, this->basePort, QUdpSocket::ShareAddress);
     connect (socket2, &QUdpSocket::readyRead, this, &Network::getBaseData);
+    socket3 = new QUdpSocket(this);
+    socket3->bind(QHostAddress::AnyIPv4, this->data1Port, QUdpSocket::ShareAddress);
+    connect (socket3, &QUdpSocket::readyRead, this, &Network::getNetData1);
 }
 
 void Network::getBaseData()//基本数据
@@ -63,4 +66,20 @@ void Network::getHxData()//航行数据
                           this->ele2_state_2, this->ele2_state, this->ele2_V, this->ele2_A,
                           this->ele_an_state, this->ele_an_V, this->ele_an_A, this->duo_value,
                           this->duo_value_1, this->ym_value, this->ym_value_1, this->ry_value);
+}
+
+void Network::getNetData1()
+{
+    QByteArray buffer;
+    buffer.resize(5);
+    socket3->readDatagram(buffer.data(), buffer.size());
+    if (static_cast<quint8>(buffer[0]) == 0xA2)
+    {
+        emit this->sendData1(buffer);
+    }
+}
+
+void Network::sendNetData1(QByteArray data)
+{
+    socket3->writeDatagram(data.data(), data.size(), server, this->data1Port);
 }

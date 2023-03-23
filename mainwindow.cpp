@@ -106,7 +106,8 @@ void MainWindow::connectFunctions()
     connect(this, &MainWindow::changeLightSignal, login_widget, &LoginWidget::changeLight);
     connect(network, &Network::sendHxData, ui->page, &HxInformaion::getData);
     connect(network, &Network::sendBaseData, this, &MainWindow::updateNetworkData);
-
+    connect(ui->page_2, &HxfzWidget::sendData1, network, &Network::sendNetData1);
+    connect(network, &Network::sendData1, ui->page_2, &HxfzWidget::getData1);
 }
 
 void MainWindow::updateTimeLabel()

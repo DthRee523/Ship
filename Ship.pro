@@ -24,6 +24,7 @@ SOURCES += \
     alarminformationwidget.cpp \
     hxfzwidget.cpp \
     hxinformaion.cpp \
+    led.cpp \
     loginwidget.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -39,6 +40,7 @@ HEADERS += \
     colorMeneger.h \
     hxfzwidget.h \
     hxinformaion.h \
+    led.h \
     loginwidget.h \
     mainwindow.h \
     map.h \
@@ -52,6 +54,7 @@ FORMS += \
     alarminformationwidget.ui \
     hxfzwidget.ui \
     hxinformaion.ui \
+    led.ui \
     loginwidget.ui \
     mainwindow.ui \
     meterwidget.ui \
