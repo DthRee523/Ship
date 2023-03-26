@@ -12,5 +12,12 @@
         <file>image/rightOne.png</file>
         <file>image/rightThree.png</file>
         <file>image/rightTwo.png</file>
+        <file>image/background.png</file>
+        <file>image/background1.png</file>
+        <file>image/background2.png</file>
+        <file>image/background3.png</file>
+        <file>image/1.png</file>
+        <file>image/2.png</file>
+        <file>image/3.png</file>
     </qresource>
 </RCC>

@@ -62,8 +62,8 @@ QTabWidget::pane {
       <widget class="QWidget" name="verticalLayoutWidget">
        <property name="geometry">
         <rect>
-         <x>140</x>
-         <y>140</y>
+         <x>340</x>
+         <y>230</y>
          <width>51</width>
          <height>51</height>
         </rect>
@@ -73,8 +73,8 @@ QTabWidget::pane {
       <widget class="QPushButton" name="l_btn">
        <property name="geometry">
         <rect>
-         <x>70</x>
-         <y>200</y>
+         <x>270</x>
+         <y>290</y>
          <width>191</width>
          <height>71</height>
         </rect>
@@ -95,8 +95,8 @@ QTabWidget::pane {
       <widget class="QWidget" name="verticalLayoutWidget_2">
        <property name="geometry">
         <rect>
-         <x>430</x>
-         <y>140</y>
+         <x>580</x>
+         <y>230</y>
          <width>51</width>
          <height>51</height>
         </rect>
@@ -106,8 +106,8 @@ QTabWidget::pane {
       <widget class="QPushButton" name="lf_btn">
        <property name="geometry">
         <rect>
-         <x>360</x>
-         <y>200</y>
+         <x>510</x>
+         <y>290</y>
          <width>191</width>
          <height>71</height>
         </rect>
@@ -128,8 +128,8 @@ QTabWidget::pane {
       <widget class="QPushButton" name="rf_btn">
        <property name="geometry">
         <rect>
-         <x>670</x>
-         <y>200</y>
+         <x>740</x>
+         <y>290</y>
          <width>191</width>
          <height>71</height>
         </rect>
@@ -150,8 +150,8 @@ QTabWidget::pane {
       <widget class="QWidget" name="verticalLayoutWidget_3">
        <property name="geometry">
         <rect>
-         <x>740</x>
-         <y>140</y>
+         <x>810</x>
+         <y>230</y>
          <width>51</width>
          <height>51</height>
         </rect>
@@ -161,8 +161,8 @@ QTabWidget::pane {
       <widget class="QPushButton" name="r_btn">
        <property name="geometry">
         <rect>
-         <x>950</x>
-         <y>200</y>
+         <x>980</x>
+         <y>290</y>
          <width>191</width>
          <height>71</height>
         </rect>
@@ -183,8 +183,8 @@ QTabWidget::pane {
       <widget class="QWidget" name="verticalLayoutWidget_4">
        <property name="geometry">
         <rect>
-         <x>1020</x>
-         <y>140</y>
+         <x>1050</x>
+         <y>230</y>
          <width>51</width>
          <height>51</height>
         </rect>
@@ -194,8 +194,8 @@ QTabWidget::pane {
       <widget class="QWidget" name="verticalLayoutWidget_5">
        <property name="geometry">
         <rect>
-         <x>1350</x>
-         <y>320</y>
+         <x>1220</x>
+         <y>360</y>
          <width>51</width>
          <height>51</height>
         </rect>
@@ -205,8 +205,8 @@ QTabWidget::pane {
       <widget class="QPushButton" name="power_btn">
        <property name="geometry">
         <rect>
-         <x>1280</x>
-         <y>380</y>
+         <x>1150</x>
+         <y>420</y>
          <width>191</width>
          <height>71</height>
         </rect>
@@ -227,8 +227,8 @@ QTabWidget::pane {
       <widget class="QPushButton" name="fast_btn">
        <property name="geometry">
         <rect>
-         <x>70</x>
-         <y>570</y>
+         <x>270</x>
+         <y>550</y>
          <width>191</width>
          <height>71</height>
         </rect>
@@ -249,8 +249,8 @@ QTabWidget::pane {
       <widget class="QWidget" name="verticalLayoutWidget_6">
        <property name="geometry">
         <rect>
-         <x>140</x>
-         <y>510</y>
+         <x>340</x>
+         <y>490</y>
          <width>51</width>
          <height>51</height>
         </rect>
@@ -260,8 +260,8 @@ QTabWidget::pane {
       <widget class="QPushButton" name="slow_btn">
        <property name="geometry">
         <rect>
-         <x>360</x>
-         <y>570</y>
+         <x>510</x>
+         <y>550</y>
          <width>191</width>
          <height>71</height>
         </rect>
@@ -282,8 +282,8 @@ QTabWidget::pane {
       <widget class="QWidget" name="verticalLayoutWidget_7">
        <property name="geometry">
         <rect>
-         <x>430</x>
-         <y>510</y>
+         <x>580</x>
+         <y>490</y>
          <width>51</width>
          <height>51</height>
         </rect>
@@ -293,8 +293,8 @@ QTabWidget::pane {
       <widget class="QPushButton" name="tb_btn">
        <property name="geometry">
         <rect>
-         <x>670</x>
-         <y>570</y>
+         <x>740</x>
+         <y>550</y>
          <width>191</width>
          <height>71</height>
         </rect>
@@ -315,8 +315,8 @@ QTabWidget::pane {
       <widget class="QWidget" name="verticalLayoutWidget_8">
        <property name="geometry">
         <rect>
-         <x>740</x>
-         <y>510</y>
+         <x>810</x>
+         <y>490</y>
          <width>51</width>
          <height>51</height>
         </rect>
@@ -326,8 +326,8 @@ QTabWidget::pane {
       <widget class="QPushButton" name="water_btn">
        <property name="geometry">
         <rect>
-         <x>950</x>
-         <y>570</y>
+         <x>980</x>
+         <y>550</y>
          <width>191</width>
          <height>71</height>
         </rect>
@@ -348,14 +348,75 @@ QTabWidget::pane {
       <widget class="QWidget" name="verticalLayoutWidget_9">
        <property name="geometry">
         <rect>
-         <x>1020</x>
-         <y>510</y>
+         <x>1050</x>
+         <y>490</y>
          <width>51</width>
          <height>51</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="water_layout"/>
       </widget>
+      <widget class="QLabel" name="background_lab_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1651</width>
+         <height>901</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/image/background1.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_10">
+       <property name="geometry">
+        <rect>
+         <x>650</x>
+         <y>90</y>
+         <width>281</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>黑体</family>
+         <pointsize>24</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:rgb(0, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string> 雨刮器</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <zorder>background_lab_2</zorder>
+      <zorder>verticalLayoutWidget</zorder>
+      <zorder>l_btn</zorder>
+      <zorder>verticalLayoutWidget_2</zorder>
+      <zorder>lf_btn</zorder>
+      <zorder>rf_btn</zorder>
+      <zorder>verticalLayoutWidget_3</zorder>
+      <zorder>r_btn</zorder>
+      <zorder>verticalLayoutWidget_4</zorder>
+      <zorder>verticalLayoutWidget_5</zorder>
+      <zorder>power_btn</zorder>
+      <zorder>fast_btn</zorder>
+      <zorder>verticalLayoutWidget_6</zorder>
+      <zorder>slow_btn</zorder>
+      <zorder>verticalLayoutWidget_7</zorder>
+      <zorder>tb_btn</zorder>
+      <zorder>verticalLayoutWidget_8</zorder>
+      <zorder>water_btn</zorder>
+      <zorder>verticalLayoutWidget_9</zorder>
+      <zorder>label_10</zorder>
      </widget>
      <widget class="QWidget" name="tab_2">
       <attribute name="title">
@@ -364,8 +425,8 @@ QTabWidget::pane {
       <widget class="QPushButton" name="du_120_btn">
        <property name="geometry">
         <rect>
-         <x>280</x>
-         <y>160</y>
+         <x>390</x>
+         <y>270</y>
          <width>191</width>
          <height>71</height>
         </rect>
@@ -386,8 +447,8 @@ QTabWidget::pane {
       <widget class="QPushButton" name="dudu_120_btn">
        <property name="geometry">
         <rect>
-         <x>280</x>
-         <y>340</y>
+         <x>390</x>
+         <y>380</y>
          <width>191</width>
          <height>71</height>
         </rect>
@@ -408,8 +469,8 @@ QTabWidget::pane {
       <widget class="QPushButton" name="dudada_120_btn">
        <property name="geometry">
         <rect>
-         <x>280</x>
-         <y>510</y>
+         <x>390</x>
+         <y>490</y>
          <width>191</width>
          <height>71</height>
         </rect>
@@ -430,8 +491,8 @@ QTabWidget::pane {
       <widget class="QPushButton" name="dudadada_120_btn">
        <property name="geometry">
         <rect>
-         <x>280</x>
-         <y>710</y>
+         <x>390</x>
+         <y>600</y>
          <width>191</width>
          <height>71</height>
         </rect>
@@ -452,8 +513,8 @@ QTabWidget::pane {
       <widget class="QLabel" name="label">
        <property name="geometry">
         <rect>
-         <x>280</x>
-         <y>50</y>
+         <x>390</x>
+         <y>190</y>
          <width>191</width>
          <height>61</height>
         </rect>
@@ -477,7 +538,7 @@ QTabWidget::pane {
       <widget class="QLabel" name="label_2">
        <property name="geometry">
         <rect>
-         <x>780</x>
+         <x>730</x>
          <y>230</y>
          <width>191</width>
          <height>61</height>
@@ -502,8 +563,8 @@ QTabWidget::pane {
       <widget class="QPushButton" name="daduda_60_btn">
        <property name="geometry">
         <rect>
-         <x>780</x>
-         <y>330</y>
+         <x>730</x>
+         <y>340</y>
          <width>191</width>
          <height>71</height>
         </rect>
@@ -524,8 +585,8 @@ QTabWidget::pane {
       <widget class="QPushButton" name="du_60_btn">
        <property name="geometry">
         <rect>
-         <x>780</x>
-         <y>510</y>
+         <x>730</x>
+         <y>530</y>
          <width>191</width>
          <height>71</height>
         </rect>
@@ -543,11 +604,11 @@ QTabWidget::pane {
         <string>-</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="daduda_60_btn_2">
+      <widget class="QPushButton" name="wd_open_btn">
        <property name="geometry">
         <rect>
-         <x>1190</x>
-         <y>330</y>
+         <x>1050</x>
+         <y>340</y>
          <width>191</width>
          <height>71</height>
         </rect>
@@ -565,11 +626,11 @@ QTabWidget::pane {
         <string>打开</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="du_60_btn_2">
+      <widget class="QPushButton" name="wd_close_btn">
        <property name="geometry">
         <rect>
-         <x>1190</x>
-         <y>510</y>
+         <x>1050</x>
+         <y>530</y>
          <width>191</width>
          <height>71</height>
         </rect>
@@ -590,19 +651,19 @@ QTabWidget::pane {
       <widget class="QWidget" name="verticalLayoutWidget_19">
        <property name="geometry">
         <rect>
-         <x>1190</x>
-         <y>200</y>
+         <x>1060</x>
+         <y>260</y>
          <width>51</width>
          <height>51</height>
         </rect>
        </property>
-       <layout class="QVBoxLayout" name="l_layout_3"/>
+       <layout class="QVBoxLayout" name="wd_power_layout"/>
       </widget>
       <widget class="QLabel" name="label_5">
        <property name="geometry">
         <rect>
-         <x>1260</x>
-         <y>190</y>
+         <x>1130</x>
+         <y>250</y>
          <width>71</width>
          <height>61</height>
         </rect>
@@ -623,38 +684,71 @@ QTabWidget::pane {
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
+      <widget class="QLabel" name="background_lab_3">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1651</width>
+         <height>901</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/image/background1.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_11">
+       <property name="geometry">
+        <rect>
+         <x>650</x>
+         <y>90</y>
+         <width>281</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>黑体</family>
+         <pointsize>24</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:rgb(0, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>雾航电笛</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <zorder>background_lab_3</zorder>
+      <zorder>du_120_btn</zorder>
+      <zorder>dudu_120_btn</zorder>
+      <zorder>dudada_120_btn</zorder>
+      <zorder>dudadada_120_btn</zorder>
+      <zorder>label</zorder>
+      <zorder>label_2</zorder>
+      <zorder>daduda_60_btn</zorder>
+      <zorder>du_60_btn</zorder>
+      <zorder>wd_open_btn</zorder>
+      <zorder>wd_close_btn</zorder>
+      <zorder>verticalLayoutWidget_19</zorder>
+      <zorder>label_5</zorder>
+      <zorder>label_11</zorder>
      </widget>
      <widget class="QWidget" name="tab_3">
       <attribute name="title">
        <string>窗加热</string>
       </attribute>
-      <widget class="QPushButton" name="l_window_btn">
-       <property name="geometry">
-        <rect>
-         <x>190</x>
-         <y>420</y>
-         <width>191</width>
-         <height>71</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>黑体</family>
-         <pointsize>24</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color:rgb(0, 255, 255);</string>
-       </property>
-       <property name="text">
-        <string>左舷区</string>
-       </property>
-      </widget>
       <widget class="QPushButton" name="lf_window_btn">
        <property name="geometry">
         <rect>
-         <x>400</x>
-         <y>420</y>
+         <x>440</x>
+         <y>360</y>
          <width>191</width>
          <height>71</height>
         </rect>
@@ -669,14 +763,36 @@ QTabWidget::pane {
         <string notr="true">background-color:rgb(0, 255, 255);</string>
        </property>
        <property name="text">
-        <string>左舷区</string>
+        <string>左前区</string>
        </property>
       </widget>
       <widget class="QPushButton" name="rf_window_btn">
        <property name="geometry">
         <rect>
-         <x>600</x>
-         <y>420</y>
+         <x>950</x>
+         <y>360</y>
+         <width>191</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>黑体</family>
+         <pointsize>24</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:rgb(0, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>右前区</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="l_window_btn">
+       <property name="geometry">
+        <rect>
+         <x>440</x>
+         <y>620</y>
          <width>191</width>
          <height>71</height>
         </rect>
@@ -697,8 +813,8 @@ QTabWidget::pane {
       <widget class="QPushButton" name="r_window_btn">
        <property name="geometry">
         <rect>
-         <x>810</x>
-         <y>420</y>
+         <x>950</x>
+         <y>620</y>
          <width>191</width>
          <height>71</height>
         </rect>
@@ -713,9 +829,428 @@ QTabWidget::pane {
         <string notr="true">background-color:rgb(0, 255, 255);</string>
        </property>
        <property name="text">
-        <string>左舷区</string>
+        <string>右舷区</string>
        </property>
       </widget>
+      <widget class="QLabel" name="background_lab_4">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1651</width>
+         <height>901</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/image/background1.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_12">
+       <property name="geometry">
+        <rect>
+         <x>650</x>
+         <y>90</y>
+         <width>281</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>黑体</family>
+         <pointsize>24</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:rgb(0, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>窗加热</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QWidget" name="verticalLayoutWidget_40">
+       <property name="geometry">
+        <rect>
+         <x>440</x>
+         <y>250</y>
+         <width>51</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="lf1_window_layout"/>
+      </widget>
+      <widget class="QWidget" name="verticalLayoutWidget_41">
+       <property name="geometry">
+        <rect>
+         <x>570</x>
+         <y>250</y>
+         <width>51</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="lf2_window_layout"/>
+      </widget>
+      <widget class="QWidget" name="verticalLayoutWidget_42">
+       <property name="geometry">
+        <rect>
+         <x>1080</x>
+         <y>250</y>
+         <width>51</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="rf2_window_layout"/>
+      </widget>
+      <widget class="QWidget" name="verticalLayoutWidget_43">
+       <property name="geometry">
+        <rect>
+         <x>950</x>
+         <y>250</y>
+         <width>51</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="rf1_window_layout"/>
+      </widget>
+      <widget class="QWidget" name="verticalLayoutWidget_44">
+       <property name="geometry">
+        <rect>
+         <x>570</x>
+         <y>510</y>
+         <width>51</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="l2_window_layout"/>
+      </widget>
+      <widget class="QWidget" name="verticalLayoutWidget_45">
+       <property name="geometry">
+        <rect>
+         <x>440</x>
+         <y>510</y>
+         <width>51</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="l1_window_layout"/>
+      </widget>
+      <widget class="QWidget" name="verticalLayoutWidget_46">
+       <property name="geometry">
+        <rect>
+         <x>1080</x>
+         <y>510</y>
+         <width>51</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="r2_window_layout"/>
+      </widget>
+      <widget class="QWidget" name="verticalLayoutWidget_47">
+       <property name="geometry">
+        <rect>
+         <x>950</x>
+         <y>510</y>
+         <width>51</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="r1_window_layout"/>
+      </widget>
+      <widget class="QLabel" name="label_9">
+       <property name="geometry">
+        <rect>
+         <x>440</x>
+         <y>210</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 150, 255);</string>
+       </property>
+       <property name="text">
+        <string>L1</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_22">
+       <property name="geometry">
+        <rect>
+         <x>570</x>
+         <y>210</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 150, 255);</string>
+       </property>
+       <property name="text">
+        <string>L2</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_23">
+       <property name="geometry">
+        <rect>
+         <x>440</x>
+         <y>470</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 150, 255);</string>
+       </property>
+       <property name="text">
+        <string>L3</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_24">
+       <property name="geometry">
+        <rect>
+         <x>570</x>
+         <y>470</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 150, 255);</string>
+       </property>
+       <property name="text">
+        <string>L4</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_25">
+       <property name="geometry">
+        <rect>
+         <x>950</x>
+         <y>210</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 150, 255);</string>
+       </property>
+       <property name="text">
+        <string>R1</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_26">
+       <property name="geometry">
+        <rect>
+         <x>1080</x>
+         <y>210</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 150, 255);</string>
+       </property>
+       <property name="text">
+        <string>R2</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_27">
+       <property name="geometry">
+        <rect>
+         <x>950</x>
+         <y>460</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 150, 255);</string>
+       </property>
+       <property name="text">
+        <string>R3</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_28">
+       <property name="geometry">
+        <rect>
+         <x>1080</x>
+         <y>460</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 150, 255);</string>
+       </property>
+       <property name="text">
+        <string>R4</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lf_window_back_lab">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>270</y>
+         <width>451</width>
+         <height>91</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/image/1.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="rf_window_back_lab">
+       <property name="geometry">
+        <rect>
+         <x>820</x>
+         <y>270</y>
+         <width>451</width>
+         <height>91</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/image/1.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="l_window_back_lab">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>530</y>
+         <width>451</width>
+         <height>91</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/image/1.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="r_window_back_lab">
+       <property name="geometry">
+        <rect>
+         <x>820</x>
+         <y>530</y>
+         <width>451</width>
+         <height>91</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/image/1.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <zorder>background_lab_4</zorder>
+      <zorder>lf_window_btn</zorder>
+      <zorder>rf_window_btn</zorder>
+      <zorder>l_window_btn</zorder>
+      <zorder>r_window_btn</zorder>
+      <zorder>label_12</zorder>
+      <zorder>verticalLayoutWidget_40</zorder>
+      <zorder>verticalLayoutWidget_41</zorder>
+      <zorder>verticalLayoutWidget_42</zorder>
+      <zorder>verticalLayoutWidget_43</zorder>
+      <zorder>verticalLayoutWidget_44</zorder>
+      <zorder>verticalLayoutWidget_45</zorder>
+      <zorder>verticalLayoutWidget_46</zorder>
+      <zorder>verticalLayoutWidget_47</zorder>
+      <zorder>label_9</zorder>
+      <zorder>label_22</zorder>
+      <zorder>label_23</zorder>
+      <zorder>label_24</zorder>
+      <zorder>label_25</zorder>
+      <zorder>label_26</zorder>
+      <zorder>label_27</zorder>
+      <zorder>label_28</zorder>
+      <zorder>lf_window_back_lab</zorder>
+      <zorder>rf_window_back_lab</zorder>
+      <zorder>l_window_back_lab</zorder>
+      <zorder>r_window_back_lab</zorder>
      </widget>
      <widget class="QWidget" name="tab_4">
       <attribute name="title">
@@ -724,8 +1259,8 @@ QTabWidget::pane {
       <widget class="QPushButton" name="l_window_btn_2">
        <property name="geometry">
         <rect>
-         <x>150</x>
-         <y>150</y>
+         <x>330</x>
+         <y>230</y>
          <width>191</width>
          <height>71</height>
         </rect>
@@ -746,8 +1281,8 @@ QTabWidget::pane {
       <widget class="QPushButton" name="l_window_btn_3">
        <property name="geometry">
         <rect>
-         <x>150</x>
-         <y>270</y>
+         <x>330</x>
+         <y>350</y>
          <width>191</width>
          <height>71</height>
         </rect>
@@ -768,8 +1303,8 @@ QTabWidget::pane {
       <widget class="QPushButton" name="l_window_btn_4">
        <property name="geometry">
         <rect>
-         <x>150</x>
-         <y>380</y>
+         <x>330</x>
+         <y>460</y>
          <width>191</width>
          <height>71</height>
         </rect>
@@ -790,8 +1325,8 @@ QTabWidget::pane {
       <widget class="QPushButton" name="l_window_btn_5">
        <property name="geometry">
         <rect>
-         <x>150</x>
-         <y>490</y>
+         <x>330</x>
+         <y>570</y>
          <width>191</width>
          <height>71</height>
         </rect>
@@ -812,8 +1347,8 @@ QTabWidget::pane {
       <widget class="QPushButton" name="l_window_btn_6">
        <property name="geometry">
         <rect>
-         <x>400</x>
-         <y>490</y>
+         <x>580</x>
+         <y>570</y>
          <width>191</width>
          <height>71</height>
         </rect>
@@ -834,8 +1369,8 @@ QTabWidget::pane {
       <widget class="QPushButton" name="l_window_btn_7">
        <property name="geometry">
         <rect>
-         <x>400</x>
-         <y>150</y>
+         <x>580</x>
+         <y>230</y>
          <width>191</width>
          <height>71</height>
         </rect>
@@ -856,8 +1391,8 @@ QTabWidget::pane {
       <widget class="QPushButton" name="l_window_btn_8">
        <property name="geometry">
         <rect>
-         <x>400</x>
-         <y>270</y>
+         <x>580</x>
+         <y>350</y>
          <width>191</width>
          <height>71</height>
         </rect>
@@ -878,8 +1413,8 @@ QTabWidget::pane {
       <widget class="QPushButton" name="l_window_btn_9">
        <property name="geometry">
         <rect>
-         <x>400</x>
-         <y>380</y>
+         <x>580</x>
+         <y>460</y>
          <width>191</width>
          <height>71</height>
         </rect>
@@ -900,8 +1435,8 @@ QTabWidget::pane {
       <widget class="QPushButton" name="l_window_btn_10">
        <property name="geometry">
         <rect>
-         <x>640</x>
-         <y>490</y>
+         <x>820</x>
+         <y>570</y>
          <width>191</width>
          <height>71</height>
         </rect>
@@ -922,8 +1457,8 @@ QTabWidget::pane {
       <widget class="QPushButton" name="l_window_btn_11">
        <property name="geometry">
         <rect>
-         <x>640</x>
-         <y>380</y>
+         <x>820</x>
+         <y>460</y>
          <width>191</width>
          <height>71</height>
         </rect>
@@ -944,8 +1479,8 @@ QTabWidget::pane {
       <widget class="QPushButton" name="l_window_btn_12">
        <property name="geometry">
         <rect>
-         <x>640</x>
-         <y>150</y>
+         <x>820</x>
+         <y>230</y>
          <width>191</width>
          <height>71</height>
         </rect>
@@ -966,8 +1501,8 @@ QTabWidget::pane {
       <widget class="QPushButton" name="l_window_btn_13">
        <property name="geometry">
         <rect>
-         <x>640</x>
-         <y>270</y>
+         <x>820</x>
+         <y>350</y>
          <width>191</width>
          <height>71</height>
         </rect>
@@ -988,8 +1523,8 @@ QTabWidget::pane {
       <widget class="QPushButton" name="l_window_btn_14">
        <property name="geometry">
         <rect>
-         <x>880</x>
-         <y>380</y>
+         <x>1060</x>
+         <y>460</y>
          <width>191</width>
          <height>71</height>
         </rect>
@@ -1010,8 +1545,8 @@ QTabWidget::pane {
       <widget class="QPushButton" name="l_window_btn_15">
        <property name="geometry">
         <rect>
-         <x>880</x>
-         <y>270</y>
+         <x>1060</x>
+         <y>350</y>
          <width>191</width>
          <height>71</height>
         </rect>
@@ -1029,11 +1564,109 @@ QTabWidget::pane {
         <string>手控</string>
        </property>
       </widget>
+      <widget class="QLabel" name="background_lab_9">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1651</width>
+         <height>901</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/image/background1.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_20">
+       <property name="geometry">
+        <rect>
+         <x>650</x>
+         <y>90</y>
+         <width>281</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>黑体</family>
+         <pointsize>24</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:rgb(0, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>总动员警铃</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <zorder>background_lab_9</zorder>
+      <zorder>l_window_btn_2</zorder>
+      <zorder>l_window_btn_3</zorder>
+      <zorder>l_window_btn_4</zorder>
+      <zorder>l_window_btn_5</zorder>
+      <zorder>l_window_btn_6</zorder>
+      <zorder>l_window_btn_7</zorder>
+      <zorder>l_window_btn_8</zorder>
+      <zorder>l_window_btn_9</zorder>
+      <zorder>l_window_btn_10</zorder>
+      <zorder>l_window_btn_11</zorder>
+      <zorder>l_window_btn_12</zorder>
+      <zorder>l_window_btn_13</zorder>
+      <zorder>l_window_btn_14</zorder>
+      <zorder>l_window_btn_15</zorder>
+      <zorder>label_20</zorder>
      </widget>
      <widget class="QWidget" name="tab_5">
       <attribute name="title">
        <string>航行信号灯</string>
       </attribute>
+      <widget class="QLabel" name="background_lab">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1651</width>
+         <height>901</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/image/background1.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_21">
+       <property name="geometry">
+        <rect>
+         <x>650</x>
+         <y>90</y>
+         <width>281</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>黑体</family>
+         <pointsize>24</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:rgb(0, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>航行信号灯</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
      </widget>
     </widget>
    </item>

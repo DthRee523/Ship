@@ -34,6 +34,15 @@ private:
     LED slow_led;
     LED tb_led;
     LED water_led;
+    LED wd_power_led;
+    LED l1_wd_led;
+    LED l2_wd_led;
+    LED l3_wd_led;
+    LED l4_wd_led;
+    LED r1_wd_led;
+    LED r2_wd_led;
+    LED r3_wd_led;
+    LED r4_wd_led;
     //雨刮器数据区
     int l_state = 0;//状态反馈
     int l_ctrl = 0;//控制指令
@@ -48,6 +57,11 @@ private:
     int tb_ctrl = 0;
     int water_ctrl = 0;
     int power = 0;
+    //雾笛
+    int power_fd = 0;
+    //窗加热
+    //总动员警铃
+    //航行信号灯
 
     QString textQss1 = "color: rgb(0, 150, 255);";
     QString textQss2 = "color: rgb(121, 121, 126);";
@@ -58,6 +72,12 @@ private:
     QString buttonQss1 = "background-color:rgb(0, 255, 255);";
     QString buttonQss2 = "background-color: rgb(121, 121, 126);";
     QString buttonQss3 = "background-color: rgb(80, 80, 80);";
+    QString backQss1 = "border-image: url(:/image/background1.png);";
+    QString backQss2 = "border-image: url(:/image/background2.png);";
+    QString backQss3 = "border-image: url(:/image/background3.png);";
+    QString back1Qss1 = "border-image: url(:/image/1.png);";
+    QString back1Qss2 = "border-image: url(:/image/3.png);";
+    QString back1Qss3 = "border-image: url(:/image/2.png);";
 
 signals:
     void sendData1(QByteArray data);
