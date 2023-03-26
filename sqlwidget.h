@@ -1,7 +1,9 @@
-#ifndef SQLWIDGET_H
+﻿#ifndef SQLWIDGET_H
 #define SQLWIDGET_H
 
 #include <QWidget>
+#include <QSqlDriver>
+#include <QSqlDatabase>
 
 namespace Ui {
 class SqlWidget;

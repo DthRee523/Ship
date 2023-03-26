@@ -29,6 +29,7 @@ private:
     LoginWidget *login_widget;
     Network *network;
     QTimer *timer;
+    QStringList alarmList;
     QPainter *painter;
     int alarmColor = 0;
     QString alarmTitle1;

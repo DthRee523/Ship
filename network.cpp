@@ -4,14 +4,15 @@ Network::Network(QObject *parent) : QObject(parent)
 {
     QSettings * configIniRead = new QSettings("config.ini",QSettings::IniFormat);//初始化读取Ini文件对象
     server = QHostAddress(configIniRead->value("server/ip").toString());//IP地址
+    localhost = QHostAddress(configIniRead->value("localhost/ip").toString());
     socket1 = new QUdpSocket(this);
-    socket1->bind(QHostAddress::AnyIPv4, this->hxPort, QUdpSocket::ShareAddress);
+    socket1->bind(localhost, this->hxPort, QUdpSocket::ShareAddress);
     connect (socket1, &QUdpSocket::readyRead, this, &Network::getHxData);
     socket2 = new QUdpSocket(this);
-    socket2->bind(QHostAddress::AnyIPv4, this->basePort, QUdpSocket::ShareAddress);
+    socket2->bind(localhost, this->basePort, QUdpSocket::ShareAddress);
     connect (socket2, &QUdpSocket::readyRead, this, &Network::getBaseData);
     socket3 = new QUdpSocket(this);
-    socket3->bind(QHostAddress::AnyIPv4, this->data1Port, QUdpSocket::ShareAddress);
+    socket3->bind(localhost, 9003, QUdpSocket::ShareAddress);
     connect (socket3, &QUdpSocket::readyRead, this, &Network::getNetData1);
 }
 
@@ -22,8 +23,8 @@ void Network::getBaseData()//基本数据
     socket2->readDatagram(buffer.data(), buffer.size());
     if (static_cast<quint8>(buffer[0]) == 0xA1)
     {
-        this->lat = static_cast<quint64>(buffer.mid(1, 8)[0]);
-        this->lon = static_cast<quint64>(buffer.mid(9, 8)[0]);
+        memcpy(&this->lat, buffer.mid(1, 8).data(), 8);
+        memcpy(&this->lon, buffer.mid(9, 8).data(), 8);
         this->speed = static_cast<quint8>(buffer[17]);
         this->sx = static_cast<quint8>(buffer[18]);
     }
@@ -39,14 +40,16 @@ void Network::getHxData()//航行数据
     {
         this->power_left_state = static_cast<quint8>(buffer[1]);
         this->power_left_dw = static_cast<quint8>(buffer[2]);
-        this->power_left_gk = static_cast<quint8>(buffer[3]);
+        int testData = static_cast<quint8>(buffer[3]);
+        this->power_left_gk = (double)testData / 100;
         this->power_right_state = static_cast<quint8>(buffer[4]);
         this->power_right_dw = static_cast<quint8>(buffer[5]);
-        this->power_right_gk = static_cast<quint8>(buffer[6]);
+        testData = static_cast<quint8>(buffer[6]);
+        this->power_right_gk = (double)testData / 100;
         this->ele1_state_1 = static_cast<quint8>(buffer[7]);
         this->ele1_state = static_cast<quint8>(buffer[8]);
         this->ele1_V = static_cast<quint8>(buffer[9]) * 256 + static_cast<quint8>(buffer[10]);
-        this->ele2_A = static_cast<quint8>(buffer[11]) * 256 + static_cast<quint8>(buffer[12]);
+        this->ele1_A = static_cast<quint8>(buffer[11]) * 256 + static_cast<quint8>(buffer[12]);
         this->ele2_state_2 = static_cast<quint8>(buffer[13]);
         this->ele2_state = static_cast<quint8>(buffer[14]);
         this->ele2_V = static_cast<quint8>(buffer[15]) * 256 + static_cast<quint8>(buffer[16]);
@@ -66,6 +69,7 @@ void Network::getHxData()//航行数据
                           this->ele2_state_2, this->ele2_state, this->ele2_V, this->ele2_A,
                           this->ele_an_state, this->ele_an_V, this->ele_an_A, this->duo_value,
                           this->duo_value_1, this->ym_value, this->ym_value_1, this->ry_value);
+    //qDebug() << this->ele2_A << " " << this->power_right_gk;
 }
 
 void Network::getNetData1()

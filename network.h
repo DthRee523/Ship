@@ -59,10 +59,11 @@ private:
     int data1Port = 9003;//雨刮器信息端口
     //模拟仿真IP地址
     QHostAddress server;
+    QHostAddress localhost;
 
 
 signals:
-    void sendHxData(int, int, int, int, int, int, int, int,
+    void sendHxData(int, int, double, int, int, double, int, int,
                     double, double, int, int, double, double, int, double, double,
                     int, int, int, int, int);
 

@@ -28,8 +28,8 @@ public:
 public slots:
     void changeLight(int index);
     void updateData();
-    void getData(int power_left_state, int power_left_dw, int power_left_gk,
-                 int power_right_state, int power_right_dw, int power_right_gk,
+    void getData(int power_left_state, int power_left_dw, double power_left_gk,
+                 int power_right_state, int power_right_dw, double power_right_gk,
                  int ele1_state_1, int ele1_state, double ele1_V, double ele1_A,
                  int ele2_state_2, int ele2_state, double ele2_V, double ele2_A,
                  int ele_an_state, double ele_an_V, double ele_an_A, int duo_value,

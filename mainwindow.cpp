@@ -19,13 +19,6 @@ MainWindow::MainWindow(QWidget *parent)
     timer->start();
 
     this->connectFunctions();
-
-    QStringList testList;
-    for (int i = 0; i < 30; i++)
-    {
-        testList.append(QString::fromLocal8Bit("测试主机1故障"));
-    }
-    this->updateAlarmInformation(testList);
 }
 
 MainWindow::~MainWindow()

@@ -11,8 +11,8 @@ HxInformaion::HxInformaion(QWidget *parent) :
     ui->pBar_ym->setMaximum(100);
     ui->pBar_ym_1->setMaximum(100);
     ui->pBar_ry->setMaximum(100);
-    ui->pBar_left->setValue(this->power_left_gk * 100);
-    ui->pBar_right->setValue(this->power_right_gk * 100);
+    ui->pBar_left->setValue(this->power_left_gk);
+    ui->pBar_right->setValue(this->power_right_gk);
     ui->pBar_ym->setValue(this->ym_value);
     ui->pBar_ym_1->setValue(this->ym_value_1);
     ui->pBar_ry->setValue(this->ry_value);
@@ -191,6 +191,7 @@ void HxInformaion::updateData()
     ui->pBar_right->setValue(this->power_right_gk * 100);
     ui->pBar_ym->setValue(this->ym_value);
     ui->pBar_ym_1->setValue(this->ym_value_1);
+    ui->pBar_ry->setValue(this->ry_value);
     ui->power_left_gk_lab->setText(QString::number(this->power_left_gk));
     ui->power_right_gk_lab->setText(QString::number(this->power_right_gk));
     ui->ym_lab->setText(QString::number(this->ym_value) + "%");
@@ -215,16 +216,16 @@ void HxInformaion::updateData()
     ui->duo1_widget->UpdateAngle(this->duo_value_1);
 }
 
-void HxInformaion::getData(int power_left_state, int power_left_dw, int power_left_gk, int power_right_state, int power_right_dw, int power_right_gk, int ele1_state_1, int ele1_state,
+void HxInformaion::getData(int power_left_state, int power_left_dw, double power_left_gk, int power_right_state, int power_right_dw, double power_right_gk, int ele1_state_1, int ele1_state,
                            double ele1_V, double ele1_A, int ele2_state_2, int ele2_state, double ele2_V, double ele2_A, int ele_an_state, double ele_an_V,
                            double ele_an_A, int duo_value, int duo_value_1, int ym_value, int ym_value_1, int ry_value)
 {
     this->power_left_state = power_left_state;
     this->power_left_dw = power_left_dw;
-    this->power_left_gk = (double)power_left_gk / 100;
+    this->power_left_gk = power_left_gk;
     this->power_right_state = power_right_state;
     this->power_right_dw = power_right_dw;
-    this->power_right_gk = (double)power_right_gk / 100;
+    this->power_right_gk = power_right_gk;
     this->ele1_state_1 = ele1_state_1;
     this->ele1_state = ele1_state;
     this->ele1_V = ele1_V;
