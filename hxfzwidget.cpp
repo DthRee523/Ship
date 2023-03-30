@@ -598,8 +598,12 @@ void HxfzWidget::dataToNetData4()
 void HxfzWidget::dataToNetData5()
 {
     QByteArray data;
+    data.resize(4);
     //转化区
-
+    data[0] = 0xA4;
+    data[1] = this->ship1_ctrl;
+    data[2] = this->ship2_ctrl;
+    data[3] = this->ship3_ctrl;
     emit this->sendData5(data);
 }
 
@@ -632,7 +636,12 @@ void HxfzWidget::getData4(QByteArray data)
 
 void HxfzWidget::getData5(QByteArray data)
 {
-
+    this->ship1_state = static_cast<quint8>(data[1]);
+    this->ship2_state = static_cast<quint8>(data[2]);
+    this->ship3_state = static_cast<quint8>(data[3]);
+    this->ship1_led.setOn(ship1_state);
+    this->ship2_led.setOn(ship2_state);
+    this->ship3_led.setOn(ship3_state);
 }
 
 

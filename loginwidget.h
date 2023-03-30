@@ -4,6 +4,8 @@
 #include <QDialog>
 #include <QTimer>
 #include <QRegExpValidator>
+#include <QCryptographicHash>//MD5加密
+#include <QDebug>
 
 namespace Ui {
 class LoginWidget;
@@ -24,10 +26,12 @@ signals:
 public slots:
     void changeLight(int index);
     void getPassword(int password);
+    void getMd5Password(QByteArray password);
 
 private:
     Ui::LoginWidget *ui;
     int password;
+    QByteArray realPassword;
 };
 
 #endif // LOGINWIDGET_H

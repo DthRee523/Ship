@@ -14,7 +14,9 @@ LoginWidget::LoginWidget(QWidget *parent) :
     this->move(1240, 450),
     ui->password_line->setValidator(new QRegExpValidator(QRegExp("[0-9]+$")));
     connect(ui->login_button, &QPushButton::clicked, this, [=](){
-        if (ui->password_line->text().toInt() == this->password)
+        QByteArray inputPassword;
+        inputPassword = QCryptographicHash::hash(QString::number(ui->password_line->text().toInt()).toLatin1(),QCryptographicHash::Md5);
+        if (inputPassword == this->realPassword)
         {
             this->setVisible(false);
             emit this->open();
@@ -74,4 +76,10 @@ void LoginWidget::changeLight(int index)
 void LoginWidget::getPassword(int password)
 {
     this->password = password;
+    this->realPassword = QCryptographicHash::hash(QString::number(this->password).toLatin1(),QCryptographicHash::Md5);
+}
+
+void LoginWidget::getMd5Password(QByteArray password)
+{
+    this->realPassword = password;
 }

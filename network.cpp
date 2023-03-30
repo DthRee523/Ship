@@ -21,7 +21,8 @@ Network::Network(QObject *parent) : QObject(parent)
     socket6 = new QUdpSocket(this);//警铃
     socket6->bind(localhost, this->alarmBellPort, QUdpSocket::ShareAddress);
     socket7 = new QUdpSocket(this);
-    socket7->bind(localhost, 9007, QUdpSocket::ShareAddress);
+    socket7->bind(localhost, this->shipLightPort, QUdpSocket::ShareAddress);
+    connect(socket7, &QUdpSocket::readyRead, this, &Network::getNetData5);
 }
 
 void Network::getBaseData()//基本数据
@@ -91,6 +92,17 @@ void Network::getNetData1()
     }
 }
 
+void Network::getNetData5()
+{
+    QByteArray buffer;
+    buffer.resize(4);
+    socket7->readDatagram(buffer.data(), buffer.size());
+    if (static_cast<quint8>(buffer[0]) == 0xA4)
+    {
+        emit this->sendData5(buffer);
+    }
+}
+
 void Network::sendNetData1(QByteArray data)
 {
     socket3->writeDatagram(data.data(), data.size(), server, this->data1Port);
@@ -99,4 +111,9 @@ void Network::sendNetData1(QByteArray data)
 void Network::sendNetData4(QByteArray data)
 {
     socket6->writeDatagram(data.data(), data.size(), server, this->alarmBellPort);
+}
+
+void Network::sendNetData5(QByteArray data)
+{
+    socket7->writeDatagram(data.data(), data.size(), server, this->shipLightPort);
 }
