@@ -24,6 +24,15 @@ HxfzWidget::HxfzWidget(QWidget *parent) :
     ui->rf2_window_layout->addWidget(&r2_wd_led);
     ui->r1_window_layout->addWidget(&r3_wd_led);
     ui->r2_window_layout->addWidget(&r4_wd_led);
+    ui->alarm_layout->addWidget(&alarm_led);
+    ui->ship_power_layout->addWidget(&ship_power_led);
+    ui->ship1_layout->addWidget(&ship1_led);
+    ui->ship2_layout->addWidget(&ship2_led);
+    ui->ship3_layout->addWidget(&ship3_led);
+    ui->ship4_layout->addWidget(&ship4_led);
+    ui->ship5_layout->addWidget(&ship5_led);
+    ui->ship6_layout->addWidget(&ship6_led);
+    ui->ship7_layout->addWidget(&ship7_led);
     this->connectFunc();
 }
 
@@ -113,6 +122,17 @@ void HxfzWidget::getlight(int index)
         ui->lf_window_back_lab->setStyleSheet(back1Qss1);
         ui->rf_window_back_lab->setStyleSheet(back1Qss1);
         ui->r_window_back_lab->setStyleSheet(back1Qss1);
+        ui->alarm_power_btn->setStyleSheet(buttonQss1);
+        ui->alarm_openn_btn->setStyleSheet(buttonQss1);
+        ui->ship_back->setStyleSheet(shipBackQss1);
+        ui->ship_power_btn->setStyleSheet(buttonQss1);
+        ui->ship1_btn->setStyleSheet(buttonQss1);
+        ui->ship2_btn->setStyleSheet(buttonQss1);
+        ui->ship3_btn->setStyleSheet(buttonQss1);
+        ui->ship4_btn->setStyleSheet(buttonQss1);
+        ui->ship5_btn->setStyleSheet(buttonQss1);
+        ui->ship6_btn->setStyleSheet(buttonQss1);
+        ui->ship7_btn->setStyleSheet(buttonQss1);
         break;
     case 1:
         qss = "QTabBar::tab{\
@@ -190,6 +210,17 @@ void HxfzWidget::getlight(int index)
         ui->lf_window_back_lab->setStyleSheet(back1Qss2);
         ui->rf_window_back_lab->setStyleSheet(back1Qss2);
         ui->r_window_back_lab->setStyleSheet(back1Qss2);
+        ui->alarm_power_btn->setStyleSheet(buttonQss2);
+        ui->alarm_openn_btn->setStyleSheet(buttonQss2);
+        ui->ship_back->setStyleSheet(shipBackQss2);
+        ui->ship_power_btn->setStyleSheet(buttonQss2);
+        ui->ship1_btn->setStyleSheet(buttonQss2);
+        ui->ship2_btn->setStyleSheet(buttonQss2);
+        ui->ship3_btn->setStyleSheet(buttonQss2);
+        ui->ship4_btn->setStyleSheet(buttonQss2);
+        ui->ship5_btn->setStyleSheet(buttonQss2);
+        ui->ship6_btn->setStyleSheet(buttonQss2);
+        ui->ship7_btn->setStyleSheet(buttonQss2);
         break;
     case 2:
         qss = "QTabBar::tab{\
@@ -267,6 +298,17 @@ void HxfzWidget::getlight(int index)
         ui->lf_window_back_lab->setStyleSheet(back1Qss3);
         ui->rf_window_back_lab->setStyleSheet(back1Qss3);
         ui->r_window_back_lab->setStyleSheet(back1Qss3);
+        ui->alarm_power_btn->setStyleSheet(buttonQss3);
+        ui->alarm_openn_btn->setStyleSheet(buttonQss3);
+        ui->ship_back->setStyleSheet(shipBackQss3);
+        ui->ship_power_btn->setStyleSheet(buttonQss3);
+        ui->ship1_btn->setStyleSheet(buttonQss3);
+        ui->ship2_btn->setStyleSheet(buttonQss3);
+        ui->ship3_btn->setStyleSheet(buttonQss3);
+        ui->ship4_btn->setStyleSheet(buttonQss3);
+        ui->ship5_btn->setStyleSheet(buttonQss3);
+        ui->ship6_btn->setStyleSheet(buttonQss3);
+        ui->ship7_btn->setStyleSheet(buttonQss3);
         break;
     }
 
@@ -288,6 +330,15 @@ void HxfzWidget::getlight(int index)
     this->r2_wd_led.changeLight(index);
     this->r3_wd_led.changeLight(index);
     this->r4_wd_led.changeLight(index);
+    this->alarm_led.changeLight(index);
+    this->ship_power_led.changeLight(index);
+    this->ship1_led.changeLight(index);
+    this->ship2_led.changeLight(index);
+    this->ship3_led.changeLight(index);
+    this->ship4_led.changeLight(index);
+    this->ship5_led.changeLight(index);
+    this->ship6_led.changeLight(index);
+    this->ship7_led.changeLight(index);
 }
 
 void HxfzWidget::connectFunc()
@@ -390,6 +441,116 @@ void HxfzWidget::connectFunc()
         }
     });
     /////////////////////雾笛////////////////////////////////////////
+    connect(ui->wd_open_btn, &QPushButton::clicked, this, [=](){
+        this->power_wd = 1;
+        this->wd_power_led.setOn(this->power_wd);
+    });
+
+    connect(ui->wd_close_btn, &QPushButton::clicked, this, [=](){
+        this->power_wd = 0;
+        this->wd_power_led.setOn(this->power_wd);
+    });
+
+
+    //警铃
+    connect(ui->alarm_power_btn, &QPushButton::clicked, this, [=](){
+        this->alarm_power = !this->alarm_power;
+        this->alarm_led.setOn(this->alarm_power);
+    });
+    //手动开
+    connect(ui->alarm_openn_btn, &QPushButton::pressed, this, [=](){
+        if (this->alarm_power)
+        {
+            this->alarm_isOpen = 1;
+            dataToNetData4();
+        }
+    });
+    //手动关
+    connect(ui->alarm_openn_btn, &QPushButton::released, this, [=](){
+        if (this->alarm_power)
+        {
+            this->alarm_isOpen = 0;
+            dataToNetData4();
+        }
+    });
+
+    ///航行信号灯
+    connect(ui->ship_power_btn, &QPushButton::clicked, this, [=](){
+        this->ship_power = !this->ship_power;
+        this->ship_power_led.setOn(this->ship_power);
+
+        if (this->ship_power == 0)
+        {
+            this->ship1_ctrl = 0;
+            this->ship2_ctrl = 0;
+            this->ship3_ctrl = 0;
+            this->ship4_power = 0;
+            this->ship5_power = 0;
+            this->ship6_power = 0;
+            this->ship7_power = 0;
+            this->ship4_led.setOn(this->ship4_power);
+            this->ship5_led.setOn(this->ship5_power);
+            this->ship6_led.setOn(this->ship6_power);
+            this->ship7_led.setOn(this->ship7_power);
+            dataToNetData5();
+        }
+    });
+
+    connect(ui->ship4_btn, &QPushButton::clicked, this, [=](){
+        if (this->ship_power)
+        {
+            this->ship4_power = !this->ship4_power;
+            this->ship4_led.setOn(this->ship4_power);
+        }
+    });
+
+    connect(ui->ship5_btn, &QPushButton::clicked, this, [=](){
+        if(this->ship_power)
+        {
+            this->ship5_power = !this->ship5_power;
+            this->ship5_led.setOn(this->ship5_power);
+        }
+    });
+
+    connect(ui->ship6_btn, &QPushButton::clicked, this, [=](){
+        if(this->ship_power)
+        {
+            this->ship6_power = !this->ship6_power;
+            this->ship6_led.setOn(this->ship6_power);
+        }
+    });
+
+    connect(ui->ship7_btn, &QPushButton::clicked, this, [=](){
+        if(this->ship_power)
+        {
+            this->ship7_power = !this->ship7_power;
+            this->ship7_led.setOn(this->ship7_power);
+        }
+    });
+
+    connect(ui->ship1_btn, &QPushButton::clicked, this, [=](){
+        if (this->ship_power)
+        {
+            this->ship1_ctrl = !this->ship1_ctrl;
+            dataToNetData5();
+        }
+    });
+
+    connect(ui->ship2_btn, &QPushButton::clicked, this, [=](){
+        if(this->ship_power)
+        {
+            this->ship2_ctrl = !this->ship2_ctrl;
+            dataToNetData5();
+        }
+    });
+
+    connect(ui->ship3_btn, &QPushButton::clicked, this, [=](){
+        if (this->ship_power)
+        {
+            this->ship3_ctrl = !this->ship3_ctrl;
+            dataToNetData5();
+        }
+    });
 }
 
 void HxfzWidget::dataToNetData1()
@@ -424,8 +585,13 @@ void HxfzWidget::dataToNetData3()
 void HxfzWidget::dataToNetData4()
 {
     QByteArray data;
+    data.resize(2);
     //转化区
-
+    data[0] = 0xA3;
+    if (this->alarm_isOpen)
+        data[1] = 0x01;
+    else
+        data[1] = 0x00;
     emit this->sendData4(data);
 }
 

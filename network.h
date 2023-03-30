@@ -18,10 +18,15 @@ public slots:
     void getHxData();
     void getNetData1();
     void sendNetData1(QByteArray data);
+    void sendNetData4(QByteArray data);
 private:
     QUdpSocket *socket1;
     QUdpSocket *socket2;
     QUdpSocket *socket3;
+    QUdpSocket *socket4;
+    QUdpSocket *socket5;
+    QUdpSocket *socket6;
+    QUdpSocket *socket7;
 
     //数据区
     //基本数据
@@ -57,6 +62,7 @@ private:
     int hxPort = 9001;//船舶信息端口
     int basePort = 9002;//基本信息端口
     int data1Port = 9003;//雨刮器信息端口
+    int alarmBellPort = 9006;//警铃
     //模拟仿真IP地址
     QHostAddress server;
     QHostAddress localhost;

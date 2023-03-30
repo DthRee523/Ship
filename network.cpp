@@ -5,15 +5,23 @@ Network::Network(QObject *parent) : QObject(parent)
     QSettings * configIniRead = new QSettings("config.ini",QSettings::IniFormat);//初始化读取Ini文件对象
     server = QHostAddress(configIniRead->value("server/ip").toString());//IP地址
     localhost = QHostAddress(configIniRead->value("localhost/ip").toString());
-    socket1 = new QUdpSocket(this);
+    socket1 = new QUdpSocket(this);//航行信息
     socket1->bind(localhost, this->hxPort, QUdpSocket::ShareAddress);
     connect (socket1, &QUdpSocket::readyRead, this, &Network::getHxData);
-    socket2 = new QUdpSocket(this);
+    socket2 = new QUdpSocket(this);//基本数据
     socket2->bind(localhost, this->basePort, QUdpSocket::ShareAddress);
     connect (socket2, &QUdpSocket::readyRead, this, &Network::getBaseData);
-    socket3 = new QUdpSocket(this);
-    socket3->bind(localhost, 9003, QUdpSocket::ShareAddress);
+    socket3 = new QUdpSocket(this);//雨刮器
+    socket3->bind(localhost, this->data1Port, QUdpSocket::ShareAddress);
     connect (socket3, &QUdpSocket::readyRead, this, &Network::getNetData1);
+    socket4 = new QUdpSocket(this);
+    socket4->bind(localhost, 9004, QUdpSocket::ShareAddress);
+    socket5 = new QUdpSocket(this);
+    socket5->bind(localhost, 9005, QUdpSocket::ShareAddress);
+    socket6 = new QUdpSocket(this);//警铃
+    socket6->bind(localhost, this->alarmBellPort, QUdpSocket::ShareAddress);
+    socket7 = new QUdpSocket(this);
+    socket7->bind(localhost, 9007, QUdpSocket::ShareAddress);
 }
 
 void Network::getBaseData()//基本数据
@@ -86,4 +94,9 @@ void Network::getNetData1()
 void Network::sendNetData1(QByteArray data)
 {
     socket3->writeDatagram(data.data(), data.size(), server, this->data1Port);
+}
+
+void Network::sendNetData4(QByteArray data)
+{
+    socket6->writeDatagram(data.data(), data.size(), server, this->alarmBellPort);
 }

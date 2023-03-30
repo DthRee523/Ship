@@ -101,6 +101,7 @@ void MainWindow::connectFunctions()
     connect(network, &Network::sendBaseData, this, &MainWindow::updateNetworkData);
     connect(ui->page_2, &HxfzWidget::sendData1, network, &Network::sendNetData1);
     connect(network, &Network::sendData1, ui->page_2, &HxfzWidget::getData1);
+    connect(ui->page_2, &HxfzWidget::sendData4, network, &Network::sendNetData4);
 }
 
 void MainWindow::updateTimeLabel()

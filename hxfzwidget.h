@@ -43,6 +43,15 @@ private:
     LED r2_wd_led;
     LED r3_wd_led;
     LED r4_wd_led;
+    LED alarm_led;
+    LED ship_power_led;
+    LED ship1_led;
+    LED ship2_led;
+    LED ship3_led;
+    LED ship4_led;
+    LED ship5_led;
+    LED ship6_led;
+    LED ship7_led;
     //雨刮器数据区
     int l_state = 0;//状态反馈
     int l_ctrl = 0;//控制指令
@@ -58,10 +67,24 @@ private:
     int water_ctrl = 0;
     int power = 0;
     //雾笛
-    int power_fd = 0;
+    int power_wd = 0;
     //窗加热
     //总动员警铃
+    int alarm_power = 0;
+    int alarm_isOpen = 0;
     //航行信号灯
+    int ship_power = 0;
+    int ship4_power = 0;
+    int ship5_power = 0;
+    int ship6_power = 0;
+    int ship7_power = 0;
+    int ship1_ctrl = 0;
+    int ship1_state = 0;
+    int ship2_ctrl = 0;
+    int ship2_state = 0;
+    int ship3_ctrl = 0;
+    int ship3_state = 0;
+
 
     QString textQss1 = "color: rgb(0, 150, 255);";
     QString textQss2 = "color: rgb(121, 121, 126);";
@@ -78,6 +101,9 @@ private:
     QString back1Qss1 = "border-image: url(:/image/1.png);";
     QString back1Qss2 = "border-image: url(:/image/3.png);";
     QString back1Qss3 = "border-image: url(:/image/2.png);";
+    QString shipBackQss1 = "border-image: url(:/image/ship1.png);";
+    QString shipBackQss2 = "border-image: url(:/image/ship2.png);";
+    QString shipBackQss3 = "border-image: url(:/image/ship3.png);";
 
 signals:
     void sendData1(QByteArray data);
