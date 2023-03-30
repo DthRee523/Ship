@@ -125,9 +125,7 @@ signals:
     void sendData5(QByteArray data);
 public slots:
     void getData1(QByteArray data);
-    void getData2(QByteArray data);
     void getData3(QByteArray data);
-    void getData4(QByteArray data);
     void getData5(QByteArray data);
 };
 

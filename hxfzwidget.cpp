@@ -449,6 +449,49 @@ void HxfzWidget::connectFunc()
     connect(ui->wd_close_btn, &QPushButton::clicked, this, [=](){
         this->power_wd = 0;
         this->wd_power_led.setOn(this->power_wd);
+        this->dataToNetData2(0);
+    });
+
+    connect(ui->daduda_60_btn, &QPushButton::clicked, this, [=](){
+        if (this->power_wd)
+        {
+            this->dataToNetData2(1);
+        }
+    });
+
+    connect(ui->du_60_btn, &QPushButton::clicked, this, [=](){
+        if (this->power_wd)
+        {
+            this->dataToNetData2(2);
+        }
+    });
+
+    connect(ui->du_120_btn, &QPushButton::clicked, this, [=](){
+        if (this->power_wd)
+        {
+            this->dataToNetData2(3);
+        }
+    });
+
+    connect(ui->dudu_120_btn, &QPushButton::clicked, this, [=](){
+        if (this->power_wd)
+        {
+            this->dataToNetData2(4);
+        }
+    });
+
+    connect(ui->dudada_120_btn, &QPushButton::clicked, this, [=](){
+        if (this->power_wd)
+        {
+            this->dataToNetData2(5);
+        }
+    });
+
+    connect(ui->dudada_120_btn, &QPushButton::clicked, this, [=](){
+        if (this->power_wd)
+        {
+            this->dataToNetData2(6);
+        }
     });
 
 
@@ -551,49 +594,6 @@ void HxfzWidget::connectFunc()
             dataToNetData5();
         }
     });
-
-    //雾笛
-    connect(ui->daduda_60_btn, &QPushButton::clicked, this, [=](){
-        if (this->power_wd)
-        {
-            this->dataToNetData2(1);
-        }
-    });
-
-    connect(ui->du_60_btn, &QPushButton::clicked, this, [=](){
-        if (this->power_wd)
-        {
-            this->dataToNetData2(2);
-        }
-    });
-
-    connect(ui->du_120_btn, &QPushButton::clicked, this, [=](){
-        if (this->power_wd)
-        {
-            this->dataToNetData2(3);
-        }
-    });
-
-    connect(ui->dudu_120_btn, &QPushButton::clicked, this, [=](){
-        if (this->power_wd)
-        {
-            this->dataToNetData2(4);
-        }
-    });
-
-    connect(ui->dudada_120_btn, &QPushButton::clicked, this, [=](){
-        if (this->power_wd)
-        {
-            this->dataToNetData2(5);
-        }
-    });
-
-    connect(ui->dudada_120_btn, &QPushButton::clicked, this, [=](){
-        if (this->power_wd)
-        {
-            this->dataToNetData2(6);
-        }
-    });
 }
 
 void HxfzWidget::dataToNetData1()
@@ -669,11 +669,6 @@ void HxfzWidget::getData1(QByteArray data)//雨刮器
     this->r_led.setOn(this->r_state);
 }
 
-void HxfzWidget::getData2(QByteArray data)
-{
-
-}
-
 void HxfzWidget::getData3(QByteArray data)
 {
     this->lf1_window_state = static_cast<quint8>(data[1]);
@@ -693,11 +688,6 @@ void HxfzWidget::getData3(QByteArray data)
     this->r2_wd_led.setOn(this->rf2_window_state);
     this->r3_wd_led.setOn(this->r1_window_state);
     this->r4_wd_led.setOn(this->r2_window_state);
-}
-
-void HxfzWidget::getData4(QByteArray data)
-{
-
 }
 
 void HxfzWidget::getData5(QByteArray data)
