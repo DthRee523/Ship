@@ -551,6 +551,49 @@ void HxfzWidget::connectFunc()
             dataToNetData5();
         }
     });
+
+    //雾笛
+    connect(ui->daduda_60_btn, &QPushButton::clicked, this, [=](){
+        if (this->power_wd)
+        {
+            this->dataToNetData2(1);
+        }
+    });
+
+    connect(ui->du_60_btn, &QPushButton::clicked, this, [=](){
+        if (this->power_wd)
+        {
+            this->dataToNetData2(2);
+        }
+    });
+
+    connect(ui->du_120_btn, &QPushButton::clicked, this, [=](){
+        if (this->power_wd)
+        {
+            this->dataToNetData2(3);
+        }
+    });
+
+    connect(ui->dudu_120_btn, &QPushButton::clicked, this, [=](){
+        if (this->power_wd)
+        {
+            this->dataToNetData2(4);
+        }
+    });
+
+    connect(ui->dudada_120_btn, &QPushButton::clicked, this, [=](){
+        if (this->power_wd)
+        {
+            this->dataToNetData2(5);
+        }
+    });
+
+    connect(ui->dudada_120_btn, &QPushButton::clicked, this, [=](){
+        if (this->power_wd)
+        {
+            this->dataToNetData2(6);
+        }
+    });
 }
 
 void HxfzWidget::dataToNetData1()
@@ -566,19 +609,26 @@ void HxfzWidget::dataToNetData1()
     emit this->sendData1(data);
 }
 
-void HxfzWidget::dataToNetData2()
+void HxfzWidget::dataToNetData2(int index)//雾笛
 {
     QByteArray data;
+    data.resize(2);
     //转化区
-
+    data[0] = 0xA5;
+    data[1] = index;
     emit this->sendData2(data);
 }
 
-void HxfzWidget::dataToNetData3()
+void HxfzWidget::dataToNetData3()//窗加热
 {
     QByteArray data;
+    data.resize(5);
     //转化区
-
+    data[0] = 0xA6;
+    data[1] = lf_window_ctrl;
+    data[2] = rf_window_ctrl;
+    data[3] = l_window_ctrl;
+    data[4] = r_window_ctrl;
     emit this->sendData3(data);
 }
 
@@ -626,7 +676,23 @@ void HxfzWidget::getData2(QByteArray data)
 
 void HxfzWidget::getData3(QByteArray data)
 {
+    this->lf1_window_state = static_cast<quint8>(data[1]);
+    this->lf2_window_state = static_cast<quint8>(data[2]);
+    this->rf1_window_state = static_cast<quint8>(data[3]);
+    this->rf2_window_state = static_cast<quint8>(data[4]);
+    this->l1_window_state = static_cast<quint8>(data[5]);
+    this->l2_window_state = static_cast<quint8>(data[6]);
+    this->r1_window_state = static_cast<quint8>(data[7]);
+    this->r2_window_state = static_cast<quint8>(data[8]);
 
+    this->l1_wd_led.setOn(this->lf1_window_state);
+    this->l2_wd_led.setOn(this->lf2_window_state);
+    this->l3_wd_led.setOn(this->l1_window_state);
+    this->l4_wd_led.setOn(this->l2_window_state);
+    this->r1_wd_led.setOn(this->rf1_window_state);
+    this->r2_wd_led.setOn(this->rf2_window_state);
+    this->r3_wd_led.setOn(this->r1_window_state);
+    this->r4_wd_led.setOn(this->r2_window_state);
 }
 
 void HxfzWidget::getData4(QByteArray data)

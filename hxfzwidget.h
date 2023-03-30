@@ -18,7 +18,7 @@ public:
     void getlight(int index);
     void connectFunc();
     void dataToNetData1();//从具体数据转化为网络报文
-    void dataToNetData2();//从具体数据转化为网络报文
+    void dataToNetData2(int index);//从具体数据转化为网络报文
     void dataToNetData3();//从具体数据转化为网络报文
     void dataToNetData4();//从具体数据转化为网络报文
     void dataToNetData5();//从具体数据转化为网络报文
@@ -69,6 +69,18 @@ private:
     //雾笛
     int power_wd = 0;
     //窗加热
+    int lf_window_ctrl = 0;
+    int rf_window_ctrl = 0;
+    int l_window_ctrl = 0;
+    int r_window_ctrl = 0;
+    int lf1_window_state = 0;
+    int lf2_window_state = 0;
+    int rf1_window_state = 0;
+    int rf2_window_state = 0;
+    int l1_window_state = 0;
+    int l2_window_state = 0;
+    int r1_window_state = 0;
+    int r2_window_state = 0;
     //总动员警铃
     int alarm_power = 0;
     int alarm_isOpen = 0;

@@ -17,8 +17,11 @@ public slots:
     void getBaseData();
     void getHxData();
     void getNetData1();
+    void getNetData3();
     void getNetData5();
     void sendNetData1(QByteArray data);
+    void sendNetData2(QByteArray data);
+    void sendNetData3(QByteArray data);
     void sendNetData4(QByteArray data);
     void sendNetData5(QByteArray data);
 private:
@@ -64,8 +67,11 @@ private:
     int hxPort = 9001;//船舶信息端口
     int basePort = 9002;//基本信息端口
     int data1Port = 9003;//雨刮器信息端口
+    int foghornPort = 9004;//雾笛
+    int windowHeatingPort = 9005;//窗加热
     int alarmBellPort = 9006;//警铃
     int shipLightPort = 9007;//信号灯
+
     //模拟仿真IP地址
     QHostAddress server;
     QHostAddress localhost;
@@ -78,6 +84,7 @@ signals:
 
     void sendBaseData(double, double, int, int);
     void sendData1(QByteArray);
+    void sendDate3(QByteArray);
     void sendData5(QByteArray);
 };
 

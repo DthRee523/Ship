@@ -15,9 +15,10 @@ Network::Network(QObject *parent) : QObject(parent)
     socket3->bind(localhost, this->data1Port, QUdpSocket::ShareAddress);
     connect (socket3, &QUdpSocket::readyRead, this, &Network::getNetData1);
     socket4 = new QUdpSocket(this);
-    socket4->bind(localhost, 9004, QUdpSocket::ShareAddress);
+    socket4->bind(localhost, this->foghornPort, QUdpSocket::ShareAddress);
     socket5 = new QUdpSocket(this);
-    socket5->bind(localhost, 9005, QUdpSocket::ShareAddress);
+    socket5->bind(localhost, this->windowHeatingPort, QUdpSocket::ShareAddress);
+    connect(socket5, &QUdpSocket::readyRead, this, &Network::getNetData3);
     socket6 = new QUdpSocket(this);//警铃
     socket6->bind(localhost, this->alarmBellPort, QUdpSocket::ShareAddress);
     socket7 = new QUdpSocket(this);
@@ -92,6 +93,17 @@ void Network::getNetData1()
     }
 }
 
+void Network::getNetData3()
+{
+    QByteArray buffer;
+    buffer.resize(9);
+    socket5->readDatagram(buffer.data(), buffer.size());
+    if (static_cast<quint8>(buffer[0]) == 0xA6)
+    {
+        emit this->sendDate3(buffer);
+    }
+}
+
 void Network::getNetData5()
 {
     QByteArray buffer;
@@ -106,6 +118,16 @@ void Network::getNetData5()
 void Network::sendNetData1(QByteArray data)
 {
     socket3->writeDatagram(data.data(), data.size(), server, this->data1Port);
+}
+
+void Network::sendNetData2(QByteArray data)
+{
+    socket4->writeDatagram(data.data(), data.size(), server, this->foghornPort);
+}
+
+void Network::sendNetData3(QByteArray data)
+{
+    socket5->writeDatagram(data.data(), data.size(), server, this->windowHeatingPort);
 }
 
 void Network::sendNetData4(QByteArray data)
